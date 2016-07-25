@@ -1,0 +1,53 @@
+<ion-view >
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+      <button class="button button-icon icon ion-search"></button>
+    </div>
+    <h1 class="title">告警中心</h1>
+    <div class="buttons">
+      <button class="button button-icon icon ion-navicon"></button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="no-header">
+    <ion-list>
+      <ion-item class="logo-item">
+            <canvas id="canvas" style="position:absolute;top:80px;left:0px;z-index:2;"></canvas>
+      </ion-item>
+
+      <ion-item class="alarm-count">
+        <div class="alarm-count-num">6800</div>
+        <div class="alarm-count-text">告警总数</div>
+      </ion-item>
+      <div class="row text-center alarm-level">
+        <div class="col col-center">
+          <span class="alarm-level-num">5800</span>
+          <br/>
+          <span class="alarm-level-text">严重</span>
+        </div>
+        <div class="col col-center">
+          <span class="alarm-level-num">23</span>
+          <br/>
+          <span class="alarm-level-text">警告</span>
+        </div>
+        <div class="col col-center">
+          <span class="alarm-level-num">200</span>
+          <br/>
+          <span class="alarm-level-text">提醒</span>
+        </div>
+      </div>
+
+      <ion-item class="alarm-top5">
+        <img src="img/top5@2x.png">
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/bmc/alarms">
+        <img ng-src="{{chat.face}}">
+        {{chat.name}}
+        <span class="item-note">
+          {{chat.lastText}}
+        </span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
